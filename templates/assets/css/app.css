@@ -1132,7 +1132,7 @@ input[type='radio']:checked {
 /* --   shop now button  ---*/
 
 .shop-now-btn {
-    border: 1.5px solid var(--color-dark);
+    border: 1.5px solid var(--color-white);
     font-size: 20px;
     padding: 3px 15px;
 }
@@ -1141,14 +1141,14 @@ input[type='radio']:checked {
     margin-left: 20px;
 }
 
-.shop-now-btn.white {
+.shop-now-btn.black {
     border: 1.5px solid var(--color-white);
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .shop-now-btn:hover {
-    background-color: var(--color-dark);
-    border-color: var(--color-dark);
+    background-color: var(--color-black);
+    border-color: var(--color-white);
     color: var(--color-white);
 }
 
@@ -1373,6 +1373,9 @@ Terms Input
 
 .product .action-btns {
     text-align: right;
+    border: 1px solid black; /* Black border around the box */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color for contrast */
 }
 
 .product-list {
@@ -2587,7 +2590,7 @@ ul.pagination li a.current {
 }
 
 .collection-comming-soon.style-1 {
-    background: url('./../media/banner/winter-collection-comming-soon.jpg');
+    background: url('img/b0b96b49a19ce56ac55d2d1d6f977afd.jpg');
     background-size: cover;
     height: 584px;
     padding: 80px 0 0 0;
