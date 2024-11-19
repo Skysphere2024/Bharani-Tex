@@ -1165,7 +1165,7 @@ input[type='radio']:checked {
 /* -----  Slip Btn Style 2 -----*/
 
 .slipfit-btn-style2 {
-    background-color: var(--color-grey-light);
+    background-color: pink;
     position: relative;
     border: none;
     padding: 0;
@@ -1182,7 +1182,7 @@ input[type='radio']:checked {
     float: right;
     padding: 5px 5px 5px 16px;
     color: var(--color-white);
-    background-color: var(--color-dark);
+    background-color: pink;
 }
 
 .slipfit-btn-style2 .icon::before {
@@ -1190,8 +1190,8 @@ input[type='radio']:checked {
     position: absolute;
     top: 0;
     left: 0px;
-    border-top: 34px solid var(--color-dark);
-    border-left: 16px solid var(--color-grey-light);
+    border-top: 34px solid pink;
+    border-left: 16px solid pink;
     width: 0;
 }
 
@@ -1206,18 +1206,18 @@ input[type='radio']:checked {
 }
 
 .slipfit-btn-style2.lg .icon::before {
-    border-top: 45px solid var(--color-dark);
-    border-left: 22px solid var(--color-grey-light);
+    border-top: 45px solid pink;
+    border-left: 22px solid pink;
 }
 
 .slipfit-btn-style2:hover {
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: pink;
+    color: pink;
 }
 
 .slipfit-btn-style2:hover .icon::before {
-    background-color: var(--color-dark);
-    border-left: 16px solid var(--color-dark);
+    background-color: pink;
+    border-left: 16px solid pink;
 }
 
 /* -----------------------
