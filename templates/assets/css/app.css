@@ -2078,6 +2078,34 @@ ul.pagination li a.current {
     -webkit-transition: var(--transition);
     transition: var(--transition);
 }
+.curved-input {
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 25px; /* Curve the input box */
+    padding: 10px 15px; /* Add padding for a better appearance */
+    font-size: 16px; /* Adjust font size */
+    width: 70%; /* Set width (adjust as needed) */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease; /* Add smooth focus effect */
+}
+
+.curved-input:focus {
+    border-color: #ff5722; /* Highlight border color on focus */
+    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5); /* Optional glow effect */
+}
+.subscribe-btn {
+    background-color: #bc574d; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding for button size */
+    font-size: 16px; /* Font size */
+    border-radius: 25px; /* Makes the button curved */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.subscribe-btn:hover {
+    background-color: #bc574d; /* Slightly darker shade for hover */
+}
 
 .footer-newsletter .input-group .subscribe-btn:hover {
     background-color: var(--color-dark);
@@ -2281,7 +2309,8 @@ ul.pagination li a.current {
 }
 
 .banner.style-1 {
-    background: url('./../media/banner/banner-s1-bg.jpg');
+    /* background: url('./../media/banner/banner-s1-bg.jpg'); */
+    background-color: #e3c4ba;
     padding: 115px 0 50px 0;
     background-size: cover;
     width: 100%;
@@ -2321,7 +2350,8 @@ ul.pagination li a.current {
 }
 
 .banner.style-2 {
-    background: url('./../media/banner/banner-s2-bg.jpg');
+    /* background: url('./../media/banner/banner-s2-bg.jpg'); */
+    background-color: #bc574d;
     padding: 30px 0 30px 0;
     background-size: cover;
     width: 100%;
