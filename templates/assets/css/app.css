@@ -1607,7 +1607,18 @@ ul.pagination li a.current {
 /*-------------------------
    Header Styles
 -------------------------*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;  /* Ensure it's above other elements */
+}
 
+/* Add padding to the body or content to prevent navbar overlap */
+body {
+    padding-top: 100px; /* Adjust based on the height of your navbar */
+}
 .header.style-1 {
     position: absolute;
     width: 100%;
@@ -2501,6 +2512,7 @@ ul.pagination li a.current {
 
 .collection.style-1 .wraper {
     display: flex;
+    justify-content: center;
 }
 
 .collection.style-1 .wraper .box {
