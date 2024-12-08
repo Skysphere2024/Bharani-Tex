@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .dashboard {
+            display: flex;
+            gap: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .main-content {
+            flex: 3;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product .content {
+            margin-top: 10px;
+        }
+        .product .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .product .review {
+            color: #f39c12;
+        }
+        .product .price {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .product .actions {
+            margin-top: 10px;
+        }
+        .slipfit-btn-style2, .whishlist-btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .whishlist-btn {
+            background-color: #e74c3c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>E-commerce Admin Dashboard</h1>
+        <div class="dashboard">
+            <div class="sidebar">
+                <h2>Navigation</h2>
+                <button onclick="showProducts()">Manage Products</button>
+                <button onclick="openAddProductModal()">Add New Product</button>
+                <button onclick="showOrders()">View Orders</button>
+            </div>
+            <div class="main-content" id="mainContent">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <input type="text" id="productName" placeholder="Product Name" required>
+                <input type="number" id="productPrice" placeholder="Price" step="0.01" required>
+                <select id="productType" required>
+                    <option value="">Select Type</option>
+                    <option value="LONG ANARKALI">LONG ANARKALI</option>
+                    <option value="CROP TOP">CROP TOP</option>
+                    <option value="SKIRTS">SKIRTS</option>
+                    <option value="LEHANGAS">LEHANGAS</option>
+                    <option value="CASUALS">CASUALS</option>
+                    <option value="KURTIS">KURTIS</option>
+                    <option value="HALF SAREES">HALF SAREES</option>
+                    <option value="DRAPE DRESS">DRAPE DRESS</option>
+                    <option value="PARTY WEAR">PARTY WEAR</option>
+                </select>
+                <textarea id="productDescription" placeholder="Description" required></textarea>
+                <input type="url" id="productImageUrl" placeholder="Image URL" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Product Modal -->
+    <div id="updateProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Update Product</h2>
+            <form id="updateProductForm">
+                <input type="hidden" id="updateProductId">
+                <input type="text" id="updateProductName" placeholder="Product Name" required>
+                <input type="number" id="updateProductPrice" placeholder="Price" step="0.01" required>
+                <select id="updateProductType" required>
+                    <option value="">Select Type</option>
+                    <option value="LONG ANARKALI">LONG ANARKALI</option>
+                    <option value="CROP TOP">CROP TOP</option>
+                    <option value="SKIRTS">SKIRTS</option>
+                    <option value="LEHANGAS">LEHANGAS</option>
+                    <option value="CASUALS">CASUALS</option>
+                    <option value="KURTIS">KURTIS</option>
+                    <option value="HALF SAREES">HALF SAREES</option>
+                    <option value="DRAPE DRESS">DRAPE DRESS</option>
+                    <option value="PARTY WEAR">PARTY WEAR</option>
+                </select>
+                <textarea id="updateProductDescription" placeholder="Description" required></textarea>
+                <input type="url" id="updateProductImageUrl" placeholder="Image URL" required>
+                <button type="submit">Update Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Sample data (in a real application, this would come from a backend)
+        let products = [
+            { id: 1, name: "Black fitted Top with Fur Coat", price: 19.99, type: "CASUALS", description: "Stylish black fitted top with fur coat", imageUrl: "assets/media/casuals img/black casual 4.jpg" },
+            { id: 2, name: "Red Anarkali Dress", price: 49.99, type: "LONG ANARKALI", description: "Beautiful red Anarkali dress", imageUrl: "assets/media/anarkali img/red anarkali.jpg" },
+            { id: 3, name: "Blue Crop Top", price: 14.99, type: "CROP TOP", description: "Trendy blue crop top", imageUrl: "assets/media/crop top img/blue crop top.jpg" }
+        ];
+
+        let orders = [
+            { id: 1, customer: "John Doe", products: ["Black fitted Top with Fur Coat"], total: 19.99, status: "Shipped" },
+            { id: 2, customer: "Jane Smith", products: ["Red Anarkali Dress", "Blue Crop Top"], total: 64.98, status: "Processing" },
+            { id: 3, customer: "Bob Johnson", products: ["Blue Crop Top"], total: 14.99, status: "Delivered" }
+        ];
+
+        function showProducts() {
+            const mainContent = document.getElementById('mainContent');
+            let productsHtml = `
+                <h2>Manage Products</h2>
+                <div class="product-grid">
+            `;
+            products.forEach(product => {
+                productsHtml += `
+                    <div class="product">
+                        <a href="${product.imageUrl}" class="preview img-hover-zoom">
+                            <img alt="${product.name}" src="${product.imageUrl}">
+                        </a>
+                        <div class="content">
+                            <p class="review"><i class="fa fa-star"></i> &nbsp;5</p>
+                            <h3 class="title">${product.name}</h3>
+                            <p class="price">$${product.price.toFixed(2)}</p>
+                            <p>Type: ${product.type}</p>
+                            <p>${product.description}</p>
+                            <div class="actions">
+                                <button onclick="openUpdateProductModal(${product.id})">Update</button>
+                                <button onclick="deleteProduct(${product.id})">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            productsHtml += '</div>';
+            mainContent.innerHTML = productsHtml;
+        }
+
+        function showOrders() {
+            const mainContent = document.getElementById('mainContent');
+            let ordersHtml = `
+                <h2>View Orders</h2>
+                <table>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Products</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+            `;
+            orders.forEach(order => {
+                ordersHtml += `
+                    <tr>
+                        <td>${order.id}</td>
+                        <td>${order.customer}</td>
+                        <td>${order.products.join(', ')}</td>
+                        <td>$${order.total.toFixed(2)}</td>
+                        <td>${order.status}</td>
+                    </tr>
+                `;
+            });
+            ordersHtml += '</table>';
+            mainContent.innerHTML = ordersHtml;
+        }
+
+        // Add Product Modal
+        const addProductModal = document.getElementById('addProductModal');
+        const addProductForm = document.getElementById('addProductForm');
+
+        function openAddProductModal() {
+            addProductModal.style.display = "block";
+        }
+
+        addProductForm.onsubmit = function(e) {
+            e.preventDefault();
+            const newProduct = {
+                id: products.length + 1,
+                name: document.getElementById('productName').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                type: document.getElementById('productType').value,
+                description: document.getElementById('productDescription').value,
+                imageUrl: document.getElementById('productImageUrl').value
+            };
+            products.push(newProduct);
+            addProductModal.style.display = "none";
+            showProducts();
+        };
+
+        // Update Product Modal
+        const updateProductModal = document.getElementById('updateProductModal');
+        const updateProductForm = document.getElementById('updateProductForm');
+
+        function openUpdateProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            document.getElementById('updateProductId').value = product.id;
+            document.getElementById('updateProductName').value = product.name;
+            document.getElementById('updateProductPrice').value = product.price;
+            document.getElementById('updateProductType').value = product.type;
+            document.getElementById('updateProductDescription').value = product.description;
+            document.getElementById('updateProductImageUrl').value = product.imageUrl;
+            updateProductModal.style.display = "block";
+        }
+
+        updateProductForm.onsubmit = function(e) {
+            e.preventDefault();
+            const updatedProduct = {
+                id: parseInt(document.getElementById('updateProductId').value),
+                name: document.getElementById('updateProductName').value,
+                price: parseFloat(document.getElementById('updateProductPrice').value),
+                type: document.getElementById('updateProductType').value,
+                description: document.getElementById('updateProductDescription').value,
+                imageUrl: document.getElementById('updateProductImageUrl').value
+            };
+            const index = products.findIndex(p => p.id === updatedProduct.id);
+            products[index] = updatedProduct;
+            updateProductModal.style.display = "none";
+            showProducts();
+        };
+
+        function deleteProduct(productId) {
+            if (confirm('Are you sure you want to delete this product?')) {
+                products = products.filter(p => p.id !== productId);
+                showProducts();
+            }
+        }
+
+        // Close modal when clicking on <span> (x)
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.onclick = function() {
+                addProductModal.style.display = "none";
+                updateProductModal.style.display = "none";
+            }
+        });
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == addProductModal) {
+                addProductModal.style.display = "none";
+            }
+            if (event.target == updateProductModal) {
+                updateProductModal.style.display = "none";
+            }
+        }
+
+        // Initial load
+        showProducts();
+    </script>
+</body>
+</html>
