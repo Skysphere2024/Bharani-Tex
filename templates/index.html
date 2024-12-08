@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="assets/css/vendor/sal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
+  <!-- Add this link to include Font Awesome (make sure it's before your stylesheet or scripts) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Site Stylesheet -->
     <link rel="stylesheet" href="assets/css/app.css">
 
@@ -54,41 +55,54 @@
     </a>
 
     <!-- Main Wrapper Start -->
+     
     <div id="main-wrapper" class="main-wrapper">
         <!--=====================================-->
         <!--=        Header Area Start       	=-->
         <!--=====================================-->
-        <header class="header style-1">
-            <div class="container">
+        <header class="header style-1" style="height: 200px;">
+            <!-- <div class="container"> -->
                 <!-- Start Mainmanu Nav -->
-                <nav class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="index.html"><img alt="" src="assets/media/logo.png"></a>
+                <nav class="navbar navbar-expand-md" >
+                    <a class="navbar-brand" href="index.html"><img alt="" src="assets/media/logo.jpg" style="width:100px ;"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <i class="fas fa-bars"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="navbar-nav me-auto ms-auto mainmenu">
-                            <li class="menu-item-has-children">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="men.html">Men</a>
+                            <li class="menu-item-has-children" >
+                                <a href="index.html" style="font-size: medium;">HOME</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="women.html">Women</a>
-                                <ul class="slipfit-submenu">
-                                    <li><a href="Long Anarkali1.html">LONG ANARKALI</a></li>
-                                    <li><a href="CROP TOP1.html">CROP TOP</a></li>
-                                    <li><a href="SKIRTS1.html">SKIRTS</a></li>
-                                    <li><a href="Lehenga1.html">LEHANGAS</a></li>
-                                    <li><a href="CASUALS1.html">CASUALS</a></li>
-                                    <li><a href="KURTIS-1.html">KURTIS</a></li>
-                                    <li><a href="HALF SAREES-1.html">HALF SAREES</a></li>
-                                    <li><a href="DRAPE DRESS.html">DRAPE DRESS</a></li>
-                                    <li><a href="PARTY WEAR-1.html">PARTY WEAR</a></li>
-                                </ul>
+                                <a href="Long Anarkali1.html" style="font-size: medium;">LONG ANARKALI</a>
                             </li>
-                            <li><a href="KIDS COLLECTION-1.html">KIDS COLLECTION</a></li>
+                            <li class="menu-item-has-children">
+                                <a href="CROP TOP1.html" style="font-size: medium;">CROP TOP</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="SKIRTS1.html" style="font-size: medium;">SKIRTS</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="Lehenga1.html" style="font-size: medium;">LEHANGAS</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="CASUALS1.html" style="font-size: medium;">CASUALS</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="KURTIS-1.html" style="font-size: medium;">KURTIS</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="HALF SAREES-1.html" style="font-size: medium;">HALF SAREES</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="DRAPE DRESS.html" style="font-size: medium;">DRAPE DRESS</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="PARTY WEAR-1.html" style="font-size: medium;">PARTY WEAR</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="KIDS COLLECTION-1.html" style="font-size: medium;">KIDS COLLECTION</a>
+                            </li>
 
                             <!-- <li class="menu-item-has-children">
                                 <ul class="slipfit-submenu multiline">
@@ -130,7 +144,7 @@
                                                 <h6><a href="./product-detail.html">Basic White Top with Fitted..</a>
                                                 </h6>
                                                 <span><strong>Color:</strong> White</span>
-                                                <p>$35</p>
+                                                <p>₹35</p>
                                                 <input type="number" name="qty" value="1"> &nbsp; <button type="button" class="btn rm-btn btn-secondary btn-xs"><i
                                                         class="fal fa-trash"></i></button>
                                             </div>
@@ -141,7 +155,7 @@
                                                 <h6><a href="./product-detail.html">Halter Dress with a Velvet..</a>
                                                 </h6>
                                                 <span><strong>Color:</strong> Brown</span>
-                                                <p>$30</p>
+                                                <p>₹30</p>
                                                 <input type="number" name="qty" value="1"> &nbsp; <button type="button" class="btn rm-btn btn-secondary btn-xs"><i
                                                         class="fal fa-trash"></i></button>
                                             </div>
@@ -153,20 +167,22 @@
                     </div>
                 </nav>
                 <!-- End Mainmanu Nav -->
-            </div>
+            <!-- </div> -->
         </header>
         <!--=====================================-->
         <!--=         Banner Area Start         =-->
         <!--=====================================-->
-        <section class="banner style-1">
+        <section class="banner style-1" >
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-sm-7 col-12">
                         <div class="banner-content" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
-                            <h1 class="title text-capitalize">COVERS ALL YOUR <br>CLOTHING NEEDS</h1>
-                            <p>From best quality to best rates <br>we cover it all</p>
+                            <br>
+                            <br>
+                            <h1 class="title text-capitalize" style="color: black">COVERS ALL YOUR <br>CLOTHING NEEDS</h1>
+                            <p style="color: black;">From best quality to best rates <br>we cover it all</p>
 
-                            <p class="collection-text">Latest Collection<br><strong>Explore Now</strong></p>
+                            <p class="collection-text" style="color: black;">Latest Collection<br><strong>Explore Now</strong></p>
 
                         </div>
 
@@ -191,7 +207,7 @@
         <!--=====================================-->
         <!--=        Collection Area Start         =-->
         <!--=====================================-->
-        <section class="collection style-1"">
+        <section class="collection style-1">
             <div class="container">
                 <div class="wraper">
                     <a href="men.html" class="box" style="width: 500px;height: 495px;">
@@ -227,18 +243,15 @@
                                     Pants</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span class="discount-price">$20.99</span> &nbsp; <span>$15.99</span>
+                                    <span class="discount-price">₹20.99</span> &nbsp; <span>₹15.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -252,18 +265,15 @@
                             <h3 class="title"><a href="product-detail.html">Halter Dress with a Velvet Coat</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span>$19.99</span> <i class="fal fa-horizontal-rule"></i> <span>$24.99</span>
+                                    <span>₹19.99</span> <i class="fal fa-horizontal-rule"></i> <span>₹24.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -278,18 +288,15 @@
                                     Pants</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span>$15.99</span> <i class="fal fa-horizontal-rule"></i> <span>$19.99</span>
+                                    <span>₹15.99</span> <i class="fal fa-horizontal-rule"></i> <span>₹19.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -305,18 +312,15 @@
                             </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span class="discount-price">$20.99</span> &nbsp; <span>$15.99</span>
+                                    <span class="discount-price">₹20.99</span> &nbsp; <span>₹15.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -330,18 +334,15 @@
                             <h3 class="title"><a href="product-detail.html">Stripe Oversized T Shirt</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span>$19.99</span> <i class="fal fa-horizontal-rule"></i> <span>$21.99</span>
+                                    <span>₹19.99</span> <i class="fal fa-horizontal-rule"></i> <span>₹21.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -397,18 +398,15 @@
                             </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span class="discount-price">$20.99</span> &nbsp; <span>$15.99</span>
+                                    <span class="discount-price">₹20.99</span> &nbsp; <span>₹15.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -423,18 +421,15 @@
                             <h3 class="title"><a href="product-detail.html">Stripe Oversized T Shirt</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span>$19.99</span> <i class="fal fa-horizontal-rule"></i> <span>$21.99</span>
+                                    <span>₹19.99</span> <i class="fal fa-horizontal-rule"></i> <span>₹21.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                               <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -450,18 +445,15 @@
                             </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span class="discount-price">$20.99</span> &nbsp; <span>$15.99</span>
+                                    <span class="discount-price">₹20.99</span> &nbsp; <span>₹15.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -476,18 +468,15 @@
                             <h3 class="title"><a href="product-detail.html">Halter Dress with a Velvet Coat</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span>$19.99</span> <i class="fal fa-horizontal-rule"></i> <span>$24.99</span>
+                                    <span>₹19.99</span> <i class="fal fa-horizontal-rule"></i> <span>₹24.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -503,18 +492,15 @@
                                     Pants</a> </h3>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12 col-12">
-                                    <span>$15.99</span> <i class="fal fa-horizontal-rule"></i> <span>$19.99</span>
+                                    <span>₹15.99</span> <i class="fal fa-horizontal-rule"></i> <span>₹19.99</span>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 col-12 ">
-                                    <button class="btn btn-cart action-btns">
-                                        <i class="fa fa-shopping-cart mr-1"style="color: gray;"></i> Add to Cart
-                                    </button>
-                                            <!-- <span class="icon"><i
-                                                class="fal fa-shopping-cart"></i></span></a> &nbsp; -->
-                                    <a href="wishlist.html">
-                                        <button class="btn btn-cart action-btns">
-                                          <i class="fa fa-heart mr-1"style="color: gray;"></i></a>
-                                        </button>
+                                <div class="col-9">
+                                    <a href="cart.html" class="slipfit-btn-style2"><span class="text" style="color: white;" >Add to
+                                            Cart</span><span class="icon" style="color: white;" ><i
+                                                class="fa fa-shopping-cart mr-1"></i></span></a>
+                                    &nbsp;
+                                    <a href="wishlist.html" class="whishlist-btn"><i
+                                            class="fa fa-heart mr-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -522,135 +508,18 @@
                 </div>
             </div>
         </section>
-
-        <!--=====================================-->
-        <!--=        Testimonial Area Start     =-->
-        <!--=====================================-->
-        <section class="testimonial style-1 ">
-            <div class="container">
-                <div class="heading style-1">
-                    <h2>Testimonials</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has<br> been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-                <div class="testimonial-slider">
-                    <div class=" testimonial-block-one">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <img alt="" width="100" height="100" src="assets/media/testimonial/user-1.png" class="attachment-full size-full">
-                            </div>
-                            <p>Sapien non nonummy maecenas vele scelerisque arcu porta fusce ridiculus curae senectus nonummy iner praesent viverra facilisis integer nisle parturient hymenaeos senectus, pede tempor ultrices elit dictumst dolor convallis
-                                habitasse ace.</p>
-                            <div class="author-box">
-                                <h3>Jeniefer</h3>
-                                <div class="reviews"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                </div>
-                                <div class="icon-box"><i class="fas fa-quote-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" testimonial-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img alt="" width="100" height="100" src="assets/media/testimonial/user-2.png" class="attachment-full size-full">
-                            </figure>
-                            <p>Sapien non nonummy maecenas vele scelerisque arcu porta fusce ridiculus curae senectus nonummy iner praesent viverra facilisis integer nisle parturient hymenaeos senectus, pede tempor ultrices elit dictumst dolor convallis
-                                habitasse ace.</p>
-                            <div class="author-box">
-                                <h3>shyzal</h3>
-                                <div class="reviews"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fal fa-star"></i>
-                                </div>
-                                <div class="icon-box"><i class="fas fa-quote-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="  testimonial-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img alt="" width="100" height="100" src="assets/media/testimonial/user-3.png" class="attachment-full size-full">
-                            </figure>
-                            <p>Sapien non nonummy maecenas vele scelerisque arcu porta fusce ridiculus curae senectus nonummy iner praesent viverra facilisis integer nisle parturient hymenaeos senectus, pede tempor ultrices elit dictumst dolor convallis
-                                habitasse ace.</p>
-                            <div class="author-box">
-                                <h3>Luther</h3>
-                                <div class="reviews"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fal fa-star"></i><i class="fal fa-star"></i>
-                                </div>
-                                <div class="icon-box"><i class="fas fa-quote-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" testimonial-block-one">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <img alt="" width="100" height="100" src="assets/media/testimonial/user-4.png" class="attachment-full size-full">
-                            </div>
-                            <p>Sapien non nonummy maecenas vele scelerisque arcu porta fusce ridiculus curae senectus nonummy iner praesent viverra facilisis integer nisle parturient hymenaeos senectus, pede tempor ultrices elit dictumst dolor convallis
-                                habitasse ace.</p>
-                            <div class="author-box">
-                                <h3>Sophie</h3>
-                                <div class="reviews"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                </div>
-                                <div class="icon-box"><i class="fas fa-quote-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!--=====================================-->
-        <!--=        Blogs Area Start         =-->
-        <!--=====================================-->
-        <!-- <section class="blogs style-1">
-            <div class="container">
-                <div class="heading style-1">
-                    <h2>Latest News</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has<br> been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-12 blog-box">
-                        <div class="content">
-                            <a href="blog-detail.html"><img alt=""  src="assets/media/blogs/blog-1.jpg"></a>
-                            <div class="text-details">
-                                <p class="text-end author">STREET FASHION - 08 April 2023</p>
-                                <h5><a href="blog-detail.html">Clothing That Defines Street Fashions</a></h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi reiciendis suscipit e sit maiores eius saepe .</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-12 blog-box">
-                        <div class="content">
-                            <a href="blog-detail.html"><img alt=""  src="assets/media/blogs/blog-2.jpg"></a>
-                            <div class="text-details">
-                                <p class="text-end author">STREET FASHION - 09 April 2023</p>
-                                <h5><a href="blog-detail.html">New Wave of Fashion Trends</a></h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi reiciendis suscipit e sit maiores eius saepe .</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-12 blog-box">
-                        <div class="content">
-                            <a href="blog-detail.html"><img alt=""  src="assets/media/blogs/blog-3.jpg"></a>
-                            <div class="text-details">
-                                <p class="text-end author">STREET FASHION - 10 April 2023</p>
-                                <h5><a href="blog-detail.html">Transparent Fashion Making Ways</a></h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi reiciendis suscipit e sit maiores eius saepe .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+        
         <!--=====================================-->
         <!--=        Footer Area Start         =-->
         <!--=====================================-->
         <footer>
-            <div class="footer-newsletter">
+            <!-- <div class="footer-newsletter">
                 <div class="container" >
                     <div class="row">
                         <div class="col-xl-7 col-lg-7 ">
                             <div class="content">
                                 <h2 class="title">Get in touch!</h2>
-                                <p class="mb-5">Get emails for latest news, sale, info on new items and more. <br>Free $20 Voucher for your 1st order if you subscribe</p>
+                                <p class="mb-5">Get emails for latest news, sale, info on new items and more. <br>Free ₹20 Voucher for your 1st order if you subscribe</p>
                                 <form class="mb-2">
                                     <div class="input-group">
                                         <input type="email" class="form-control" placeholder="Email address">
@@ -662,16 +531,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-main">
+            </div> -->
+            <div class="footer-main" style="background-color: black;">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-5 col-lg-5" data-sal-delay="100">
                             <div class="footer-widget">
                                 <img alt="" src="assets/media/logo.png">
-                                <p class="mt-4 mb-4 pe-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum modi, possimus dolore saepe nobis itaque cupiditate veniam nostrum, provident quam, neque ab dicta velit debitis cum unde recusandae. Fuga, consectetur.</p>
-                                <h6 class="mb-4"><a href="tel:+1212346845">+1212346845</a> &nbsp; <a href="mailto:info@slipfit.com">info@slipfit.com</a></h6>
-
+                                <p class="mt-4 mb-4 pe-5" style="color: var(--color-grey-normal); text-align: justify;">Srinivi Textile is a leading brand offering premium fabrics and garments that blend traditional craftsmanship with modern design. Committed to quality and sustainability, they empower artisans and deliver stylish, elegant creations. Their products reflect timeless appeal and unmatched comfort.</p>
+                                <h6 class="mb-4" style="color: var(--color-grey-normal);"><a href="tel:+91 9842899298">+91 9842899298</a>&nbsp;<a href="mailto:info@srinivi.com">info@srinivi.com</a></h6>
+            
                                 <ul class="list-unstyled social-links">
                                     <li><a href="javascript:;"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="javascript:;"><i class="fab fa-dribbble"></i></a></li>
@@ -684,20 +553,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="footer-widget">
-                                        <h6 class="widget-title">Shop</h6>
-                                        <div class="footer-menu-link">
-                                            <ul class="list-unstyled">
-                                                <li><a href="men.html">Best Sellers</a></li>
-                                                <li><a href="men.html">Discount</a></li>
-                                                <li><a href="men.html">New Arrivals</a></li>
-                                                <li><a href="men.html">On Sale</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="footer-widget">
-                                        <h6 class="widget-title">Information</h6>
+                                        <h6 class="widget-title" style="color: white;">Information</h6>
                                         <div class="footer-menu-link">
                                             <ul class="list-unstyled">
                                                 <li><a href="about.html">About us</a></li>
@@ -708,16 +564,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-8">
                                     <div class="footer-widget">
-                                        <h6 class="widget-title">Collection</h6>
-                                        <div class="footer-menu-link">
-                                            <ul class="list-unstyled">
-                                                <li><a href="men.html">Men</a></li>
-                                                <li><a href="women.html">Women</a></li>
-                                                <li><a href="KIDS COLLECTION.html">Kids</a></li>
-                                                <!-- <li><a href="men.html">Formal</a></li> -->
-                                            </ul>
+                                        <h6 class="widget-title" style="color: white;">Subscribe to our Newsletter</h6>
+                                        <div class="content">
+                                            <form class="mb-2">
+                                                <div class="input-group">
+                                                    <input type="email" class="form-control curved-input" placeholder="Email address">
+                                                    <button class="subscribe-btn" type="submit">Subscribe</button>
+                                                </div>
+                                            </form>
+                                            <p class="mb-0" style="color: var(--color-grey-normal);">By subscribing you agree to our terms and conditions</p>
                                         </div>
                                     </div>
                                 </div>
@@ -726,6 +583,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="container">
                 <div class="footer-bottom">
                     <div class="row">
